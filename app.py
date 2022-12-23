@@ -3,9 +3,7 @@ import os
 import openai
 
 # Set the API key
-#openai.api_key = os.getenv("OPENAI_API_KEY")
-openai.api_key = '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'
-
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Define a function that generates an outline for an essay about Nikola Tesla
 def generate_outline():
