@@ -1,2 +1,2 @@
-# ChatGPT
-## This is a repo that is to save interesting ChatGPT responses and build off the ideas generated 
+# ChatGPT_EssayOutline
+## This repo will take in a research topic and provide an outline for an essay 
