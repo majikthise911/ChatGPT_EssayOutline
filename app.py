@@ -10,7 +10,7 @@ prompt = st.text_area("Enter a prompt for the AI to complete", "Write an essay a
 def generate_article(description):
 # Use the OpenAI API to generate an article
     response = openai.Completion.create(
-      model="text-davinci-002", 
+      model="text-davinci-003", 
       prompt= prompt,
       temperature=0.6,
       max_tokens=4000, # the tokens are the max number of words. 
