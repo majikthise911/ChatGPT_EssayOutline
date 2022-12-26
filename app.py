@@ -4,28 +4,31 @@ import openai
 
 # Set the API key
 openai.api_key = os.getenv("OPENAI_API_KEY")
-#openai.api_key = 
 # Create input text box for user to enter a prompt
-prompt = st.text_area("Enter a prompt for the AI to complete", "Create an outline for an essay about Nikola Tesla and his contributions to technology:")
-# Define a function that generates an outline for an essay about Nikola Tesla
-def generate_outline():
-    # Use the OpenAI API to generate an outline
+prompt = st.text_area("Enter a prompt for the AI to complete", "Write an essay about Elon Musk and his contributions to technology:")
+
+def generate_article(description):
+# Use the OpenAI API to generate an article
     response = openai.Completion.create(
-      model="text-davinci-003",
-      prompt=prompt,
-      temperature=0.3,
-      max_tokens=150,
+      model="text-davinci-002", 
+      prompt= prompt,
+      temperature=0.6,
+      max_tokens=4000, # the tokens are the max number of words. 
       top_p=1.0,
       frequency_penalty=0.0,
       presence_penalty=0.0
     )
-    # Extract the outline from the API response
-    outline = response["choices"][0]["text"]
-    return outline
+    # Extract the article from the API response
+    article = response["choices"][0]["text"]
+    return article
 
-# Generate an outline
-outline = generate_outline()
+article = generate_article(prompt)
+print(article)
+
+# # Generate an outline
+# outline = generate_outline()
 
 # Display the outline
-st.write(outline)
+st.write(article)
+
 
