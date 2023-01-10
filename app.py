@@ -13,7 +13,7 @@ def generate_article(description):
       model="text-davinci-003", 
       prompt= prompt,
       temperature=0.6,
-      max_tokens=4000, # the tokens are the max number of words. 
+      max_tokens=4175, # the tokens are the max number of words. 
       top_p=1.0,
       frequency_penalty=0.0,
       presence_penalty=0.0
